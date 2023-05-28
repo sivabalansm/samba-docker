@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  smb:
+    env_file: ./.env
+    build: 
+      context: ./
+      args:
+        - USERNAME=$USERNAME
+        - PASSWORD=$PASSWORD
+    ports:
+      - "445:445"
+# volumes have been specified as per they are in the smb.conf file. You may modify them according to your personal config of the smb.conf
+    volumes:
+      - "$LOCATION/backup:/mnt/share/$USERNAME"
+      - "$LOCATION/guest:/mnt/share/guest"
+      - "$LOCATION/data:/mnt/share/data"
+
+
+
+
