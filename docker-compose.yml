@@ -11,9 +11,9 @@ services:
       - "445:445"
 # volumes have been specified as per they are in the smb.conf file. You may modify them according to your personal config of the smb.conf
     volumes:
-      - "$LOCATION/backup:/mnt/share/$USERNAME"
-      - "$LOCATION/guest:/mnt/share/guest"
-      - "$LOCATION/data:/mnt/share/data"
+      - "$LOCATION/sivabalansm:/mnt/share/$USERNAME"
+      - "$LOCATION/temp:/mnt/share/temp"
+      - "$LOCATION/media:/mnt/share/media"
 
 
 
